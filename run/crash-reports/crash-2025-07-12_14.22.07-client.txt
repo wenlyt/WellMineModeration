@@ -1,0 +1,83 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 12.07.2025, 14:22
+Description: Rendering screen
+
+java.lang.RuntimeException: Unable to load font: Icons
+	at ru.nedan.fonts.Fonts.lambda$get$0(Fonts.java:23)
+	at it.unimi.dsi.fastutil.floats.Float2ObjectMap.computeIfAbsent(Float2ObjectMap.java:383)
+	at ru.nedan.fonts.Fonts.get(Fonts.java:19)
+	at ru.nedan.gui.ClickGuiScreen.render(ClickGuiScreen.java:48)
+	at net.minecraft.client.render.GameRenderer.render(GameRenderer.java:616)
+	at net.minecraft.client.MinecraftClient.render(MinecraftClient.java:1048)
+	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:681)
+	at net.minecraft.client.main.Main.main(Main.java:215)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:461)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.awt.Font.getStringBounds(String, java.awt.font.FontRenderContext)" because "this.font" is null
+	at ru.nedan.fonts.GlyphPage.generateGlyphPage(GlyphPage.java:55)
+	at ru.nedan.fonts.Font.create(Font.java:102)
+	at ru.nedan.fonts.Fonts.lambda$get$0(Fonts.java:21)
+	... 11 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at ru.nedan.fonts.Fonts.lambda$get$0(Fonts.java:23)
+	at it.unimi.dsi.fastutil.floats.Float2ObjectMap.computeIfAbsent(Float2ObjectMap.java:383)
+	at ru.nedan.fonts.Fonts.get(Fonts.java:19)
+	at ru.nedan.gui.ClickGuiScreen.render(ClickGuiScreen.java:48)
+
+-- Screen render details --
+Details:
+	Screen name: ru.nedan.gui.ClickGuiScreen
+	Mouse location: Scaled: (480, 252). Absolute: (960.000000, 504.000000)
+	Screen size: Scaled: (960, 505). Absolute: (1920, 1009). Scale factor of 2.000000
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['notthescale'/240, l='ClientLevel', x=-44.58, y=67.00, z=122.91]]
+	Chunk stats: Client Chunk Cache: 841, 529
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-48,65,128), Chunk: (at 0,4,0 in -3,8; contains blocks -48,0,128 to -33,255,143), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 33 game time, 33 day time
+	Server brand: fabric
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.addDetailsToCrashReport(ClientWorld.java:449)
+	at net.minecraft.client.MinecraftClient.addDetailsToCrashReport(MinecraftClient.java:2239)
+	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:699)
+	at net.minecraft.client.main.Main.main(Main.java:215)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:461)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.15, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Amazon.com Inc.
+	Memory: 202942976 bytes (193 MB) / 1119879168 bytes (1068 MB) up to 4246732800 bytes (4050 MB)
+	CPUs: 12
+	JVM Flags: 0 total; 
+	Launched Version: Fabric
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: NVIDIA GeForce RTX 3050/PCIe/SSE2 GL version 4.6.0 NVIDIA 576.88, NVIDIA Corporation
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 12x 12th Gen Intel(R) Core(TM) i5-12400F

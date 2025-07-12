@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "quantumclient",
+  "version": "${version}",
+  "name": "quantumclient",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/quantumclient/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ru.nedan.Quantumclient"
+    ]
+  },
+  "mixins": [
+    "quantumclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}

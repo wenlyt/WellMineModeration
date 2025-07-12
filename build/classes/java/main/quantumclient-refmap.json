@@ -1,0 +1,54 @@
+{
+  "mappings": {
+    "ru/nedan/mixin/MixinClientConnection": {
+      "send(Lnet/minecraft/network/Packet;Lio/netty/util/concurrent/GenericFutureListener;)V": "Lnet/minecraft/class_2535;method_10752(Lnet/minecraft/class_2596;Lio/netty/util/concurrent/GenericFutureListener;)V"
+    },
+    "ru/nedan/mixin/MixinKeyboard": {
+      "onKey": "Lnet/minecraft/class_309;method_1466(JIIII)V"
+    },
+    "ru/nedan/mixin/MixinMouse": {
+      "onMouseButton": "Lnet/minecraft/class_312;method_1601(JIII)V"
+    },
+    "ru/nedan/mixin/MixinMinecraftClient": {
+      "isOnlineChatEnabled": "Lnet/minecraft/class_310;method_29044()Z",
+      "tick": "Lnet/minecraft/class_310;method_1574()V",
+      "isMultiplayerEnabled": "Lnet/minecraft/class_310;method_29043()Z"
+    },
+    "ru/nedan/mixin/GameRendererAccessor": {
+      "getFov": "method_3196(Lnet/minecraft/class_4184;FZ)D"
+    },
+    "ru/nedan/mixin/MixinInGameHud": {
+      "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V"
+    },
+    "ru/nedan/mixin/MixinClientPlayerEntity": {
+      "sendChatMessage": "Lnet/minecraft/class_746;method_3142(Ljava/lang/String;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "ru/nedan/mixin/MixinClientConnection": {
+        "send(Lnet/minecraft/network/Packet;Lio/netty/util/concurrent/GenericFutureListener;)V": "Lnet/minecraft/class_2535;method_10752(Lnet/minecraft/class_2596;Lio/netty/util/concurrent/GenericFutureListener;)V"
+      },
+      "ru/nedan/mixin/MixinKeyboard": {
+        "onKey": "Lnet/minecraft/class_309;method_1466(JIIII)V"
+      },
+      "ru/nedan/mixin/MixinMouse": {
+        "onMouseButton": "Lnet/minecraft/class_312;method_1601(JIII)V"
+      },
+      "ru/nedan/mixin/MixinMinecraftClient": {
+        "isOnlineChatEnabled": "Lnet/minecraft/class_310;method_29044()Z",
+        "tick": "Lnet/minecraft/class_310;method_1574()V",
+        "isMultiplayerEnabled": "Lnet/minecraft/class_310;method_29043()Z"
+      },
+      "ru/nedan/mixin/GameRendererAccessor": {
+        "getFov": "method_3196(Lnet/minecraft/class_4184;FZ)D"
+      },
+      "ru/nedan/mixin/MixinInGameHud": {
+        "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V"
+      },
+      "ru/nedan/mixin/MixinClientPlayerEntity": {
+        "sendChatMessage": "Lnet/minecraft/class_746;method_3142(Ljava/lang/String;)V"
+      }
+    }
+  }
+}
