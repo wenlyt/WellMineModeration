@@ -64,7 +64,7 @@ public class Quantumclient implements ModInitializer, Wrapper {
         try {
             String playerName = mc.getSession().getUsername();
 
-            URL url = new URL("httpgit commit -m \"first commit\"git commit -m \"first commit\"s://pastebin.com/raw/WeFeLjDW");
+            URL url = new URL("https://pastebin.com/raw/WeFeLjDW");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
